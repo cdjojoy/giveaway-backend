@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+    
+    <nav>
+        <a href="/">Home</a> 
+        <a href="/products"><Product</a>
+        <a href="/orders">Orders</a>
+        <a href="/admin">AdminProduct</a>
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>            
+    </nav>
+
+    <div>
+       <h1>List of Products</h1>
+        <!-- <%= JSON.stringify(products) %>-->
+       <ul>
+          <% products.forEach( (product) => { %>
+          <div>
+            <a href="/products/<%= product._id %>">
+            <li><%= product.name %></li>
+            </a>
+          </div>
+          <% }) %>
+       </ul>
+   </div>  
+
+   <div>
+       <h1>Log in </h1>
+
+      </form>
+      <% if (typeof error !== 'undefined') { %>
+        <p style="color: red;"><%= error %></p>
+      <% } %>
+   </div>
+
+</body>
+</html>

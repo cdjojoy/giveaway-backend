@@ -1,0 +1,6 @@
+
+/*Connect to Mongoose Compass  */
+mongoose.connect(`${ process.env.DB_CONNECTION }://${}:${}@${}/${ process.env.DB_DATABASE }`)
+.then( () => console.log("Mongoose is connected ..."))
+.catch( err => console.error(err))
+

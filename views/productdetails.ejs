@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= product.name %> - Super Products</title>
+</head>
+<body>
+  <h1><%= product.name %></h1>
+   <dl>
+      <dt><strong>Description</strong></dt>
+      <dd><%= product.description %></dd>
+      <dt><strong>Image</strong></dt>
+      <dd><% product.imageUrl %></dd>
+      <dt><strong>Price</strong></td>
+      <dd>$<%= product.price %></dd>
+      <dt>Created</dt>
+      <dd><%=product.createdAt %></dd>
+
+   </dl>
+ 
+</body>
+</html>
